@@ -1,6 +1,7 @@
 package com.example.androidstudydemos;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -18,7 +19,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
     }
     @Override
     public int getCount() {
-        return viewList.size();
+        return 1000;
     }
 
     @Override
@@ -29,12 +30,20 @@ public class MyViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        container.addView(viewList.get(position));
-        return viewList.get(position);
+        Log.d("position", "ins:"+position);
+        container.addView(viewList.get(position%4));
+        return viewList.get(position%3);
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView(viewList.get(position));
+        Log.d("position", "des:"+position);
+        container.removeView(viewList.get(position%4));
+    }
+
+    @Override
+    public void setPrimaryItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        Log.d("position", "pri:"+position);
+        super.setPrimaryItem(container, position%4, object);
     }
 }

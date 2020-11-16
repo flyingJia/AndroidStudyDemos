@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyDemos">
-        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".IntentDemo2"></activity>
+        <activity android:name=".IntentDataDemo" />
+        <activity android:name=".EmptyActivity" />
         <activity android:name=".ActivityCycle" />
         <activity android:name=".ActivityDemo" />
         <activity android:name=".BasicControlsDemo" />

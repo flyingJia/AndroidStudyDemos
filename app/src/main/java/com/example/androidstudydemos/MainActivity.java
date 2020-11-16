@@ -2,6 +2,7 @@ package com.example.androidstudydemos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button_viewpager;//viewpager演示
     private Button button_basicControls;//基础控件演示
     private Button button_activity;//activity生命周期和启动模式演示
+    private Button button_intent;//intent传值演示
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_basicControls.setOnClickListener(this);
         button_activity = findViewById(R.id.button_activity);
         button_activity.setOnClickListener(this);
+        button_intent = findViewById(R.id.button_intent);
+        button_intent.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_activity :
                 Intent intent4 = new Intent(MainActivity.this,ActivityDemo.class);
                 startActivity(intent4);
+                break;
+            case R.id.button_intent:
+                Intent intent5 = new Intent(MainActivity.this,IntentDataDemo.class);
+                startActivity(intent5);
                 break;
             default:
                 Log.d(TAG, "点击事件错误，没有候选点击事件");
