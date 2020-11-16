@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidStudyDemos</string>
+    <string name="button_name_listview">ListView演示</string>
+    <string name="button_name_fragment">Fragment演示</string>
+    <string name="button_name_ViewPager">ViewPager演示</string>
+    <string name="button_basicControls">基础控件演示</string>
+    <string name="button_activity">activity生命周期和启动模式演示</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
