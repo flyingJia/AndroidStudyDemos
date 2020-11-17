@@ -19,10 +19,10 @@ public class ViewPagerDemo extends AppCompatActivity implements View.OnClickList
         viewPager = findViewById(R.id.viewPager);
         viewList = new ArrayList<>();
         LayoutInflater layoutInflater = getLayoutInflater();
-        viewList.add(layoutInflater.inflate(R.layout.fragment_news,null,false));
+        viewList.add(layoutInflater.inflate(R.layout.fragment_one,null,false));
         viewList.add(layoutInflater.inflate(R.layout.fragment_tow,null,false));
         viewList.add(layoutInflater.inflate(R.layout.fragment_three,null,false));
-        viewList.add(layoutInflater.inflate(R.layout.fragment_three,null,false));
+        viewList.add(layoutInflater.inflate(R.layout.fragment_four,null,false));
         MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter(viewList);
         viewPager.setAdapter(myViewPagerAdapter);
 

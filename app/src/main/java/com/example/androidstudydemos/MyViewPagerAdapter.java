@@ -19,7 +19,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
     }
     @Override
     public int getCount() {
-        return 1000;
+        return Integer.MAX_VALUE;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         Log.d("position", "ins:"+position);
         container.addView(viewList.get(position%4));
-        return viewList.get(position%3);
+        return viewList.get(position%4);
     }
 
     @Override
@@ -46,4 +46,5 @@ public class MyViewPagerAdapter extends PagerAdapter {
         Log.d("position", "pri:"+position);
         super.setPrimaryItem(container, position%4, object);
     }
+
 }
