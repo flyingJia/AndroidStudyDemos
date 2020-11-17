@@ -19,8 +19,9 @@ public class IntentDemo2 extends AppCompatActivity {
         String data1 = intent.getStringExtra("data1");
         String data2 = intent.getStringExtra("data2");
         textView_calculate_result = findViewById(R.id.textView_calculate_result);
-        result = ""+(Integer.parseInt(data1)+Integer.parseInt(data2));
+            result = ""+(Integer.parseInt(data1)+Integer.parseInt(data2));
         textView_calculate_result.setText(data1+" + "+data2+" = "+result);
+        Integer in = Integer.getInteger("12");
         intent.putExtra("result",result);
         setResult(222,intent);
     }

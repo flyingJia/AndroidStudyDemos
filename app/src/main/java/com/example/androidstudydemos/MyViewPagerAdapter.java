@@ -15,7 +15,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
 
     public MyViewPagerAdapter(List<View> viewList){
         this.viewList = viewList;
-
+    
     }
     @Override
     public int getCount() {

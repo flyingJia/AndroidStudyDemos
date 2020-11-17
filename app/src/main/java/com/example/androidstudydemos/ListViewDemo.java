@@ -44,7 +44,7 @@ public class ListViewDemo extends AppCompatActivity {
     }
 
     private void initFruits(){
-        for (int i=0;i<25;i++){
+        for (int i=0;i<1;i++){
             Fruit fruit = new Fruit("apple",R.drawable.ic_launcher_background);
             fruitList.add(fruit);
             Fruit fruit1 = new Fruit("banana",R.drawable.ic_launcher_foreground);
