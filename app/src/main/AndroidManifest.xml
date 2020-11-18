@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidstudydemos">
 
+    <uses-permission-sdk-23 android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyDemos">
+        <activity android:name=".AnotherBrodcastReceiver"></activity>
+        <activity android:name=".BrodcastReceiverDemo" />
+        <activity android:name=".BroadCastDemo" />
+
         <service
             android:name=".MyServiceDemo"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".ServiceDemo" />
         <activity android:name=".IntentDemo2" />
@@ -31,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

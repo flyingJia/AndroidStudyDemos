@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <Button
+        android:id="@+id/button_broadCase_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送标准广播"/>
+    <Button
+        android:id="@+id/button_orderedBroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播"/>
+</LinearLayout>

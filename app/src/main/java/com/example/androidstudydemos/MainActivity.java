@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button_activity;//activity生命周期和启动模式演示
     private Button button_intent;//intent传值演示
     private Button button_service;//service演示
+    private Button button_broadCast;//button_broadCast演示
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_intent.setOnClickListener(this);
         button_service = findViewById(R.id.button_service);
         button_service.setOnClickListener(this);
+        button_broadCast = findViewById(R.id.button_broadCast);
+        button_broadCast.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_service:
                 Intent intent6 = new Intent(MainActivity.this,ServiceDemo.class);
                 startActivity(intent6);
+                break;
+            case R.id.button_broadCast:
+                Intent intent7 = new Intent(MainActivity.this,BroadCastDemo.class);
+                startActivity(intent7);
                 break;
             default:
                 Log.d(TAG, "点击事件错误，没有候选点击事件");
