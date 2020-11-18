@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyDemos">
-        <activity android:name=".IntentDemo2"></activity>
+        <service
+            android:name=".MyServiceDemo"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".ServiceDemo" />
+        <activity android:name=".IntentDemo2" />
         <activity android:name=".IntentDataDemo" />
         <activity android:name=".EmptyActivity" />
         <activity android:name=".ActivityCycle" />

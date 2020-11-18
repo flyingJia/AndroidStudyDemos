@@ -16,5 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击替换fragment"/>
+    <Button
+        android:id="@+id/button_removefragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击删除fragment"/>
 
 </LinearLayout>

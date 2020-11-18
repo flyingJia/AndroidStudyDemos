@@ -36,4 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="intent传值演示"/>
+    <Button
+        android:id="@+id/button_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="service演示"/>
 </LinearLayout>
