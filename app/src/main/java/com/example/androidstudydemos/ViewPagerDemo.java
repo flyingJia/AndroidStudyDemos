@@ -81,7 +81,7 @@ public class ViewPagerDemo extends AppCompatActivity implements View.OnClickList
 //            viewPager.setCurrentItem(index+currentItem);
 //        }
 
-//        viewPager.setAdapter(myViewPagerAdapter);
+        viewPager.setAdapter(myViewPagerAdapter);
         viewPager.setCurrentItem(index);
     }
 }

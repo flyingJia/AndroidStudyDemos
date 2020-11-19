@@ -1,14 +1,12 @@
-package com.example.androidstudydemos;
+package com.example.androidstudydemos.broadcast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+
+import com.example.androidstudydemos.R;
 
 public class BroadCastDemo extends AppCompatActivity implements View.OnClickListener {
     @Override
@@ -31,7 +29,7 @@ public class BroadCastDemo extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button_dynamicRegistration :
-                Intent intent = new Intent(BroadCastDemo.this,BrodcastReceiverDemo.class);
+                Intent intent = new Intent(BroadCastDemo.this, BrodcastReceiverDemo.class);
                 startActivity(intent);
                 break;
             case R.id.button_staticRegistration :

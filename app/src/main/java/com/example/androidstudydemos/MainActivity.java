@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.androidstudydemos.broadcast.BroadCastDemo;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private String TAG = "TAG";
     private Button button_listView;//listView演示
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent6);
                 break;
             case R.id.button_broadCast:
-                Intent intent7 = new Intent(MainActivity.this,BroadCastDemo.class);
+                Intent intent7 = new Intent(MainActivity.this, BroadCastDemo.class);
                 startActivity(intent7);
                 break;
             default:

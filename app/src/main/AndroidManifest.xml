@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyDemos">
-        <activity android:name=".AnotherBrodcastReceiver"></activity>
-        <activity android:name=".BrodcastReceiverDemo" />
-        <activity android:name=".BroadCastDemo" />
+        <activity android:name=".persistencetechnology_11_19.IOPutStream"></activity>
+        <activity android:name=".AnotherBrodcastReceiver" />
+        <activity android:name=".broadcast.BrodcastReceiverDemo" />
+        <activity android:name=".broadcast.BroadCastDemo" />
 
         <service
             android:name=".MyServiceDemo"
@@ -37,7 +38,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
