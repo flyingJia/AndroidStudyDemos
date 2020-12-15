@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private String newId;
-
+    private String test = "git命令测试";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
