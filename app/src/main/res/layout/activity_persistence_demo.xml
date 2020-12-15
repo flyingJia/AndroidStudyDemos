@@ -2,32 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/button_startService"
+        android:id="@+id/button_IOPutStream_Demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Service"/>
+        android:text="文本输入输出流"/>
     <Button
-        android:id="@+id/button_stopService"
+        android:id="@+id/button_SharedPreferences_Demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop Service"/>
+        android:text="SharedPreferences"/>
     <Button
-        android:id="@+id/button_bindService"
+        android:id="@+id/button_SQLite_Demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bind Service"/>
+        android:text="SQLite"/>
     <Button
-        android:id="@+id/button_unBindService"
+        android:id="@+id/button_LitePal_Demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UnBind Service"/>
-    <Button
-        android:id="@+id/button_getProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="获取进度"/>
+        android:text="LitePal"/>
+
 </LinearLayout>

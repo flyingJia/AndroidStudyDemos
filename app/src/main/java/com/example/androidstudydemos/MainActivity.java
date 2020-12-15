@@ -2,15 +2,17 @@ package com.example.androidstudydemos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
+import com.example.androidstudydemos.ContentProvider.ContentProvider;
+import com.example.androidstudydemos.Permission.CallPhone;
+import com.example.androidstudydemos.Service.ServiceDemo;
 import com.example.androidstudydemos.broadcast.BroadCastDemo;
+import com.example.androidstudydemos.persistencetechnology_11_19.PersistenceDemo;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private String TAG = "TAG";
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button_intent;//intent传值演示
     private Button button_service;//service演示
     private Button button_broadCast;//button_broadCast演示
+    private Button button_persistence;//持久化技术演示
+    private Button button_permission;//权限演示
+    private Button button_contentProvider;//contentprovider演示
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_service.setOnClickListener(this);
         button_broadCast = findViewById(R.id.button_broadCast);
         button_broadCast.setOnClickListener(this);
+        button_persistence = findViewById(R.id.button_persistence);
+        button_persistence.setOnClickListener(this);
+        button_permission = findViewById(R.id.button_permission);
+        button_permission.setOnClickListener(this);
+        button_contentProvider = findViewById(R.id.button_contentProvider);
+        button_contentProvider.setOnClickListener(this);
     }
 
     @Override
@@ -74,12 +85,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent5);
                 break;
             case R.id.button_service:
-                Intent intent6 = new Intent(MainActivity.this,ServiceDemo.class);
+                Intent intent6 = new Intent(MainActivity.this, ServiceDemo.class);
                 startActivity(intent6);
                 break;
             case R.id.button_broadCast:
                 Intent intent7 = new Intent(MainActivity.this, BroadCastDemo.class);
                 startActivity(intent7);
+                break;
+            case R.id.button_persistence:
+                Intent intent8 = new Intent(MainActivity.this, PersistenceDemo.class);
+                startActivity(intent8);
+                break;
+            case R.id.button_permission:
+                Intent intent9 = new Intent(MainActivity.this, CallPhone.class);
+                startActivity(intent9);
+                break;
+            case R.id.button_contentProvider:
+                Intent intent10 = new Intent(MainActivity.this, ContentProvider.class);
+                startActivity(intent10);
                 break;
             default:
                 Log.d(TAG, "点击事件错误，没有候选点击事件");

@@ -1,2 +1,4 @@
+include ':providertest'
+include ':anotherapp'
 include ':app'
 rootProject.name = "AndroidStudyDemos"

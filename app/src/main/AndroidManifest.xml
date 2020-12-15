@@ -3,25 +3,45 @@
     package="com.example.androidstudydemos">
 
     <uses-permission-sdk-23 android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyDemos">
-        <activity android:name=".persistencetechnology_11_19.IOPutStream"></activity>
+        <provider
+            android:name=".persistencetechnology_11_19.DatabaseProvider"
+            android:authorities="com.example.androidstudydemos.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
+        <provider
+            android:name=".ContentProvider.MyProvider"
+            android:authorities="com.example.androidstudydemos.ContentProvider.MyProvider"
+            android:enabled="true"></provider>
+
+        <activity android:name=".ContentProvider.ContentProvider" />
+        <activity android:name=".ContentProvider.ContactsDemo" />
+        <activity android:name=".Permission.CallPhone" />
+        <activity android:name=".persistencetechnology_11_19.LitePalDemo" />
+        <activity android:name=".persistencetechnology_11_19.SQLiteDemo" />
+        <activity android:name=".persistencetechnology_11_19.SharedPreferencesDemo" />
+        <activity android:name=".persistencetechnology_11_19.IOPutDemo" />
+        <activity android:name=".persistencetechnology_11_19.PersistenceDemo" />
         <activity android:name=".AnotherBrodcastReceiver" />
         <activity android:name=".broadcast.BrodcastReceiverDemo" />
         <activity android:name=".broadcast.BroadCastDemo" />
 
         <service
-            android:name=".MyServiceDemo"
+            android:name=".Service.MyServiceDemo"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ServiceDemo" />
+        <activity android:name=".Service.ServiceDemo" />
         <activity android:name=".IntentDemo2" />
         <activity android:name=".IntentDataDemo" />
         <activity android:name=".EmptyActivity" />

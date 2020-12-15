@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
+    <Button
+        android:id="@+id/button_sp_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="写入"/>
+    <Button
+        android:id="@+id/button_sp_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取"/>
+    <Button
+        android:id="@+id/button_sp_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改"/>
+    <Button
+        android:id="@+id/button_sp_deleteAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除所有"/>
 
-    <Button
-        android:id="@+id/button_startService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Service"/>
-    <Button
-        android:id="@+id/button_stopService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop Service"/>
-    <Button
-        android:id="@+id/button_bindService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bind Service"/>
-    <Button
-        android:id="@+id/button_unBindService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UnBind Service"/>
-    <Button
-        android:id="@+id/button_getProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="获取进度"/>
 </LinearLayout>

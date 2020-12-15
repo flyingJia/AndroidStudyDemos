@@ -1,4 +1,4 @@
-package com.example.androidstudydemos;
+package com.example.androidstudydemos.Service;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ComponentName;
@@ -9,17 +9,18 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 
+import com.example.androidstudydemos.R;
+
 public class ServiceDemo extends AppCompatActivity implements View.OnClickListener{
-    private String TAG = "ServiceDemo";
+    private String TAG = "ServiceDemo1";
     private MyServiceDemo myServiceDemo;
     private Intent intent;
-    private MyServiceDemo.DownloadBinder downloadBinder;
+    private MyServiceDemo.MyBinder myBinder;
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            downloadBinder = (MyServiceDemo.DownloadBinder)service;
-            downloadBinder.startDownload();
-            downloadBinder.getProgress();
+            myBinder = (MyServiceDemo.MyBinder)service;
+            myServiceDemo = myBinder.getMyServiceDemo();
         }
 
         @Override
@@ -38,8 +39,8 @@ public class ServiceDemo extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.button_stopService).setOnClickListener(this);
         findViewById(R.id.button_bindService).setOnClickListener(this);
         findViewById(R.id.button_unBindService).setOnClickListener(this);
+        findViewById(R.id.button_getProgress).setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -54,6 +55,9 @@ public class ServiceDemo extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.button_unBindService :
                 unbindService(serviceConnection);
+                break;
+            case R.id.button_getProgress :
+                Log.d(TAG, "当前进度："+myServiceDemo.getProcess());
                 break;
             default:
                 Log.d(TAG, "onClick: ");

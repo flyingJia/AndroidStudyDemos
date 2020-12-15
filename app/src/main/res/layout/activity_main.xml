@@ -46,4 +46,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="broadCast演示"/>
+    <Button
+        android:id="@+id/button_persistence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="持久化演示"/>
+    <Button
+        android:id="@+id/button_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="权限演示"/>
+    <Button
+        android:id="@+id/button_contentProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider演示"/>
 </LinearLayout>
